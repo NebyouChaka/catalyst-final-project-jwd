@@ -17,3 +17,7 @@
 
 **Assessment**
 In each task you will be assessed by the instructors on the “Assessment Criteria” in this rubric: https://docs.google.com/spreadsheets/d/1pKK9KCnpraEcL7FQjxeMVeDWfjbypYRcSrXCyAVPtHo/edit?usp=sharing
+
+
+**You could see our final project here**
+https://nebyouchaka.github.io/catalyst-final-project-jwd/
