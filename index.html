@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Rahma Khalif, Maria Hidalgo, Nebyou Chaka"> 
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+   
+
+    <title>Task List Generation Project</title>
+ 
+    </head>
+ 
+    <body>
+       
+         
+         <section class="form-task"> 
+           
+        <div class="navbar">
+            <div class="search-bar">
+              
+            <!-- <h1>Amazing Task List - Group 8</h1>  -->
+          <!-- <img class="img" src="photo\photo04.jpg" alt="picture" width="100%" >   -->
+            </div>
+        </div>
+        
+             <div class="container"> 
+              
+                <div class="row">
+                    <!-- Form Column -->
+                    <div class="col-12 col-md-7 main-form">
+                        <h2>New Task</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="task-name">Task Name</label>
+                                <input type="text" class="form-control" id="task-name" autocomplete="off" >
+                                <div id="name-alert" class="alert alert-warning" role="alert" style="display: none">
+                                    Task Name can not be empty!
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea class="form-control" id="description" rows="4"></textarea>
+                                <div id="descrip-alert" class="alert alert-warning" role="alert" style="display: none">
+                                    You need to describe your task...
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                
+                                <div class="form-group" style="display:inline-block; width:50%;">
+                                    <label for="assigned-to">Assigned To</label>
+                                    <input type="text" class="form-control" id="assigned-to">
+                                    <div id="assigned-alert" class="alert alert-warning" role="alert" style="display: none">
+                                        Assign task name!
+                                    </div>
+                                </div>
+                                <div class="form-group" style="display:inline-block; width:40%;">
+                                    <label for="due-date">Due Date</label>
+                                    <input type="date" class="form-control" id="due-date">
+                                    <div id="due-alert" class="alert alert-warning" role="alert" style="display: none">
+                                    You should write a valid date!
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="d"></label>
+                                <p><button onclick="validFormFieldInput();  return false;" type="button" class="btn btn-primary btn-block mb-2">Add Task</button></p>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div><br>
+                       
+                    <div class="row centered-form center-block">
+                        <div class="col d-flex justify-content-center">
+                            <div id="tasks"></div>                      
+                            
+                        
+                        <!-- <h2>Pending Tasks</h2> -->
+                        <!-- List of Tasks -->
+                        <ul id="tasks" class="list-group">
+                    
+                        </ul>
+                   </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="taskManager.js"></script>
+    <script src="index.js"></script>
+ 
+    <!-- Footer
+ 
+    <div class="footer">
+      <p>Generation Final Project JWD</p>
+    </div> -->
+  </body>
+ 
+</html>
